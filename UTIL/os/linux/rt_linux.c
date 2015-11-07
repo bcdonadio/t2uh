@@ -706,7 +706,11 @@ void wlan_802_11_to_802_3_packet(
 	pOSPkt->dev = pNetDev;
 	pOSPkt->data = pData;
 	pOSPkt->len = DataSize;
+#ifdef NET_SKBUFF_DATA_USES_OFFSET
+	pOSPkt->tail = (pOSPkt->data-pOSPkt->head)+pOSPkt->len;
+#else
 	pOSPkt->tail = pOSPkt->data + pOSPkt->len;
+#endif
 
 	/* copy 802.3 header */
 

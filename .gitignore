@@ -31,3 +31,4 @@
 *.ko
 *.order
 *.symvers
+MODULE/tools/bin2h

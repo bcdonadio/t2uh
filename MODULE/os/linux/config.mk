@@ -28,7 +28,7 @@ HAS_APCLI=n
 
 # Support Wpa_Supplicant
 # i.e. wpa_supplicant -Dralink
-HAS_WPA_SUPPLICANT=n
+HAS_WPA_SUPPLICANT=y
 
 
 # Support Native WpaSupplicant for Network Maganger
